@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header_container {
+  width: 100%;
+  background-color: black;
+}
+
+.content {
+  width: 0;
+  background-color: red;
+  height: 2px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10%;
+  margin: 6rem auto;
+  justify-content: center;
+}
+
+button {
+  width: 9vw;
+  height: 2rem;
+  border-radius: 2rem;
+  font-size: 1.5vh;
+  color: rgb(102, 98, 98);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: antiquewhite;
+  color: rgb(202, 71, 71);
+  cursor: pointer;
+}
