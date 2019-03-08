@@ -6,23 +6,25 @@ const fourthButtonEl = document.querySelector(".fourth");
 const fifthButtonEl = document.querySelector(".fifth");
 
 
-
-function mainfunc(event) {
 let width = 0;
-let n = Number(event.target.innerHTML.slice(0,-1));
-console.log(typeof(n));
+function mainfunc(event) {
 
-let myfunc = setInterval(function() {
-  if(width<n) {
-    width++;
-    loadingbarEl.style.width = width + "%";
-  }
-  else {
-    clearInterval(myfunc);
-    console.log("hello");
-  }
+  let n = Number(event.target.innerHTML.slice(0,-1));
 
-}, 10);
+  if(width>n) {
+    width = 0;
+  }
+  
+  let myfunc = setInterval(function() {
+    if(width<n) {
+      width++;
+      loadingbarEl.style.width = width + "%";
+    }
+    else {
+      clearInterval(myfunc);
+    }
+
+  }, 10);
 
 }
 
